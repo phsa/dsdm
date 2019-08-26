@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RestaurantActivity">
+
+    <CheckBox
+        android:id="@+id/pizzaCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="72dp"
+        android:text="Pizza"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editPizzaQtde"
+        android:layout_width="39dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="56dp"
+        app:layout_constraintStart_toEndOf="@+id/pizzaCheckBox"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editPizzaPrice"
+        android:layout_width="39dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="56dp"
+        app:layout_constraintStart_toEndOf="@+id/editPizzaQtde"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/sodaCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:text="Refri"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pizzaCheckBox" />
+
+    <EditText
+        android:id="@+id/editSodaQtde"
+        android:layout_width="39dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toEndOf="@+id/sodaCheckBox"
+        app:layout_constraintTop_toTopOf="@+id/editPizzaQtde" />
+
+    <EditText
+        android:id="@+id/editSodaPrice"
+        android:layout_width="39dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toEndOf="@+id/editSodaQtde"
+        app:layout_constraintTop_toTopOf="@id/editPizzaPrice" />
+
+    <CheckBox
+        android:id="@+id/hamburgerCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:text="Hamburguer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sodaCheckBox" />
+
+    <EditText
+        android:id="@+id/editHamburgerQtde"
+        android:layout_width="39dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toEndOf="@+id/pizzaCheckBox"
+        app:layout_constraintTop_toTopOf="@+id/editSodaQtde" />
+
+    <EditText
+        android:id="@+id/editHamburgerPrice"
+        android:layout_width="39dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toEndOf="@+id/editHamburgerQtde"
+        app:layout_constraintTop_toTopOf="@+id/editSodaPrice" />
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="44dp"
+        android:text="Calcular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hamburgerCheckBox" />
+</androidx.constraintlayout.widget.ConstraintLayout>
