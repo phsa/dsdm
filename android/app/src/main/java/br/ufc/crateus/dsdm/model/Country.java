@@ -1,18 +1,22 @@
 package br.ufc.crateus.dsdm.model;
 
+import br.ufc.crateus.dsdm.R;
+
 public enum Country {
 
-    EUA(0, "Estados Unidos"),
-    INDIA(1, "Índia"),
-    CHINA(2, "China"),
-    JAPAN(3, "Japão");
+    EUA(0, "Estados Unidos", R.mipmap.american_flag),
+    INDIA(1, "Índia", R.mipmap.indian_flag),
+    CHINA(2, "China", R.mipmap.chinese_flag),
+    JAPAN(3, "Japão", R.mipmap.japanese_flag);
 
     private int id;
     private String displayName;
+    private int resourceFlag;
 
-    Country(int id, String name) {
+    Country(int id, String name, int resource_flag) {
         this.id = id;
         this.displayName = name;
+        this.resourceFlag = resource_flag;
     }
 
     public int getId() {
@@ -23,7 +27,9 @@ public enum Country {
         return displayName;
     }
 
-
+    public int getResourceFlag() {
+        return resourceFlag;
+    }
 
     public static Country[] getCountries() {
         return new Country[]{ EUA, INDIA, CHINA, JAPAN };

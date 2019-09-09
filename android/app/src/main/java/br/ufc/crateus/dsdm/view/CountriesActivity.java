@@ -1,4 +1,4 @@
-package br.ufc.crateus.dsdm;
+package br.ufc.crateus.dsdm.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
 
+import br.ufc.crateus.dsdm.R;
 import br.ufc.crateus.dsdm.model.Country;
 
 public class CountriesActivity extends AppCompatActivity {
@@ -33,7 +34,9 @@ public class CountriesActivity extends AppCompatActivity {
         countrySpin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (position == 0) flagHolder.setImageResource(R.mipmap.american_flag);
+                if (position >= 0) {
+                    flagHolder.setImageResource(countries[position].getResourceFlag());
+                }
                 else flagHolder.setImageResource(R.mipmap.no_flag_icon);
             }
 

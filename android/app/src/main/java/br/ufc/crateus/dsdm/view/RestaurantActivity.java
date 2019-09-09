@@ -1,4 +1,4 @@
-package br.ufc.crateus.dsdm;
+package br.ufc.crateus.dsdm.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import br.ufc.crateus.dsdm.R;
 
 public class RestaurantActivity extends AppCompatActivity {
 

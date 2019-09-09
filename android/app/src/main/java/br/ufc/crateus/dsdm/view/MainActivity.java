@@ -1,4 +1,4 @@
-package br.ufc.crateus.dsdm;
+package br.ufc.crateus.dsdm.view;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -16,6 +16,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import br.ufc.crateus.dsdm.R;
 import br.ufc.crateus.dsdm.model.Country;
 
 public class MainActivity extends AppCompatActivity {
