@@ -16,6 +16,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import br.ufc.crateus.dsdm.model.Country;
+
 public class MainActivity extends AppCompatActivity {
 
     RadioGroup group;
@@ -27,9 +29,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        group = findViewById(R.id.radioSexGroup);
-        confirm = findViewById(R.id.confirmSex);
-        spin = findViewById(R.id.spinner);
+//        group = findViewById(R.id.radioSexGroup);
+//        confirm = findViewById(R.id.confirmSex);
+//        spin = findViewById(R.id.spinner);
 
 //        RadioButtonExample();
 //        AlertDialogExample();
@@ -38,24 +40,24 @@ public class MainActivity extends AppCompatActivity {
 
 //        startActivity(new Intent(this, RestaurantActivity.class));
 
-        startActivity(new Intent(this, ListViewActivity.class));
+        startActivity(new Intent(this, CountriesActivity.class));
 
     }
 
     private void ListViewExample() {
-        final String[] country = { "India", "USA", "China", "Japan", "Other"};
+        final Country[] countries = Country.getCountries();
 
         ListView listView = findViewById(R.id.listView);
-        final ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
-                android.R.layout.simple_list_item_1, android.R.id.text1, country);
+        final ArrayAdapter<Country> adapter = new ArrayAdapter<>(this,
+                android.R.layout.simple_list_item_1, android.R.id.text1, countries);
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 // TODO Auto-generated method stub
-                String value = adapter.getItem(position);
-                Toast.makeText(getApplicationContext(), value, Toast.LENGTH_SHORT).show();
+                Country value = adapter.getItem(position);
+                Toast.makeText(getApplicationContext(), value.getDisplayName(), Toast.LENGTH_SHORT).show();
             }
         });
     }
